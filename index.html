@@ -48,7 +48,14 @@
   .iconbtn:active{transform:scale(.94)}
   .layout{display:grid; grid-template-columns:292px minmax(0,1fr); min-height:calc(100vh - 59px)}
   .sidebar{border-right:1px solid var(--line); padding:14px 10px 90px; overflow-y:auto;
-    height:calc(100vh - 59px); position:sticky; top:59px; scrollbar-width:thin}
+    height:calc(100vh - 59px); position:sticky; top:59px; scrollbar-width:thin; scrollbar-color:var(--line) transparent}
+  .sidebar::-webkit-scrollbar{width:8px}
+  .sidebar::-webkit-scrollbar-track{background:transparent}
+  .sidebar::-webkit-scrollbar-thumb{background:var(--line); border-radius:99px; border:2px solid var(--bg)}
+  .sidebar::-webkit-scrollbar-thumb:hover{background:var(--ink3)}
+  body::-webkit-scrollbar{width:10px}
+  body::-webkit-scrollbar-track{background:transparent}
+  body::-webkit-scrollbar-thumb{background:color-mix(in srgb, var(--ink3) 55%, transparent); border-radius:99px; border:3px solid var(--bg)}
   main{min-width:0; position:relative}
   #view{max-width:860px; margin:0 auto; padding:22px 22px 120px}
   .tabbar{display:none}
